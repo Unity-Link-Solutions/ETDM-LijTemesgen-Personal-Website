@@ -11,7 +11,6 @@ const Home: React.FC = () => {
       <AboutSection
         title="About the Artist"
         description="Blending Ethiopian culture with modern beats, this artist brings the soul of ETDM to the world."
-        imageUrl="https://via.placeholder.com/600x400?text=About+Image"
       />
       <MusicPlayer />
       <Gallery />
