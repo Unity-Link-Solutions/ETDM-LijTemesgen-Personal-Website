@@ -4,10 +4,10 @@ import heroImage from "../../assets/images/hero.jpg";
 const HeroSection: React.FC = () => {
   return (
     // <section className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center">
-      <section className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center"
+    <section
+      className="relative w-full h-screen flex items-center justify-center text-center bg-cover bg-center-20"
       style={{
-        backgroundImage:
-          `url(${heroImage})`,
+        backgroundImage: `url(${heroImage})`,
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
