@@ -42,18 +42,16 @@ const Header: React.FC = () => {
     >
       {/* Top Bar */}
       {!isScrolled && (
-        <div className="bg-darkGray text-lightGray text-sm py-1 px-20 flex justify-between items-center border-b border-gray-700">
-          <span>The museum is open today 10 AM - 5 PM</span>
+        <div className="bg-darkGray text-lightGray text-sm py-1 px-10 flex justify-between items-center border-b border-gray-700">
+          <span>Concert starts on 3 PM LT</span>
           <div className="flex space-x-4 items-center">
-            <span>34th Ave, Queens, NY 11106</span>
-            <span className="cursor-pointer">Search</span>
-            <span className="cursor-pointer">English</span>
+            <span>Addis Ababa. Bole, Millinium Hall</span>
           </div>
         </div>
       )}
 
       {/* Main Header */}
-      <div className="container mx-auto px-6 lg:px-20 h-[70px] flex justify-between items-center border-b border-gray-500">
+      <div className="container mx-auto lg:px-10 h-[70px] flex justify-between items-center border-b border-gray-500">
         {/* Left Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
           {["Home", "Exhibitions", "Collections"].map((link, idx) => (

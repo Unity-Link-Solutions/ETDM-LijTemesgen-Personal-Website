@@ -8,7 +8,11 @@ const slides = [
     date: "June 4, 2024",
     title: (
       <>
-        Explore the <span className="text-red-500">ETDM</span> Experience
+        Explore the{" "}
+        <span className="bg-gradient-to-r from-gray-500 to-red-500 bg-clip-text text-transparent animate-pulse">
+          ETDM
+        </span>{" "}
+        Experience
       </>
     ),
   },
@@ -17,7 +21,11 @@ const slides = [
     date: "July 10, 2024",
     title: (
       <>
-        Discover New <span className="text-red-500">Horizons</span> . . .
+        Discover New{" "}
+        <span className="bg-gradient-to-r from-gray-500 to-red-500 bg-clip-text text-transparent animate-pulse">
+          Horizons
+        </span>{" "}
+        . . .
       </>
     ),
   },
@@ -44,7 +52,7 @@ const HeroSection: React.FC = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 15000); // Auto-slide every 15 seconds
+    const interval = setInterval(nextSlide, 50000); // Auto-slide every 50 seconds
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
@@ -83,7 +91,7 @@ const HeroSection: React.FC = () => {
       {/* Left Navigation Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black bg-opacity-50 hover:bg-red-600 text-white transition focus:outline-none z-20"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black bg-opacity-50 hover:bg-red-600 animate-pulse text-white transition focus:outline-none z-20"
         aria-label="Previous Slide"
       >
         &#8592;
@@ -92,7 +100,7 @@ const HeroSection: React.FC = () => {
       {/* Right Navigation Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black bg-opacity-50 hover:bg-red-600 text-white transition focus:outline-none z-20"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center bg-black bg-opacity-50 hover:bg-red-600 animate-pulse text-white transition focus:outline-none z-20"
         aria-label="Next Slide"
       >
         &#8594;
@@ -106,7 +114,7 @@ const HeroSection: React.FC = () => {
             onClick={() => !isAnimating && setCurrentSlide(index)}
             className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
               currentSlide === index
-                ? "bg-red-500 scale-125"
+                ? "bg-red-500 animate scale-125"
                 : "bg-gray-400 hover:bg-red-500"
             }`}
             aria-label={`Slide ${index + 1}`}
