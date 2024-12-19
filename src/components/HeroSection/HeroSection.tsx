@@ -1,10 +1,10 @@
 import React from "react";
-import heroImage from "../../assets/images/hero.jpg";
+import heroImage from "../../assets/images/photoBlack1.jpg";
 
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center-20"
+      className="relative w-full h-screen bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImage})`,
       }}
