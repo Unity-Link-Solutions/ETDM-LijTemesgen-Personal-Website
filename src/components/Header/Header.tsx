@@ -54,7 +54,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto lg:px-10 h-[70px] flex justify-between items-center border-b border-gray-500">
         {/* Left Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
-          {["Home", "Exhibitions", "Collections"].map((link, idx) => (
+          {["Home", "Gallery", "Events"].map((link, idx) => (
             <a
               key={idx}
               href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
 
         {/* Right Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
-          {["Pages", "Blog", "Shop", "Contacts", "Visit"].map((link, idx) => (
+          {["Blog", "Shop", "Contacts"].map((link, idx) => (
             <a
               key={idx}
               href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import heroImage1 from "../../assets/images/photoBlack1.jpg";
 import heroImage2 from "../../assets/images/photoBlack2.jpg";
+import heroImage3 from "../../assets/images/photoBlack3.jpg";
 
 const slides = [
   {
@@ -18,6 +19,19 @@ const slides = [
   },
   {
     image: heroImage2,
+    date: "July 10, 2024",
+    title: (
+      <>
+        Discover New{" "}
+        <span className="bg-gradient-to-r from-gray-500 to-red-500 bg-clip-text text-transparent animate-pulse">
+          Horizons
+        </span>{" "}
+        . . .
+      </>
+    ),
+  },
+  {
+    image: heroImage3,
     date: "July 10, 2024",
     title: (
       <>

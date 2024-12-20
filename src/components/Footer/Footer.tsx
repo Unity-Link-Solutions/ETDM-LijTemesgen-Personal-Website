@@ -4,8 +4,10 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1F1E18] text-white py-12">
-      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#1F1E18] text-white ">
+      <div className="w-full h-12 bg-african-pattern-1 brightness-95 transition-opacity duration-500 hover:opacity-100 opacity-80 animate-pulse"></div>
+
+      <div className="container mx-auto py-12 px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Section */}
         <div>
           <h4 className="text-2xl font-bold text-red-500 mb-4">About</h4>

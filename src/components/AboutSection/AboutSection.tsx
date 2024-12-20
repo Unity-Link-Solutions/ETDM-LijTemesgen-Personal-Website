@@ -3,14 +3,17 @@ import portraitImage from "../../assets/images/portraite.jpg";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="w-full py-16 bg-[#1F1E18] text-white">
-      <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
+    <section className="w-full  bg-[#1F1E18] text-white">
+      {/* <div className="w-full h-24 bg-african-pattern opacity-80 brightness-95"></div> */}
+      <div className="w-full h-12 bg-african-pattern-1 brightness-95 transition-opacity duration-500 hover:opacity-100 opacity-80 animate-pulse"></div>
+
+      <div className="container py-16 mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12 bg-african-pattern-2">
         {/* Left Side - Image */}
         <div className="w-full lg:w-1/2 ">
           <img
             src={portraitImage}
             alt="Lij Temesgen"
-            className="rounded-lg shadow-lg transition-transform duration-500 border-4 border-transparent duration-300 hover:filter hover:animate-pulse hover:grayscale hover:border-red-600 transition"
+            className="rounded-lg shadow-lg transition-transform duration-500 border-4 border-transparent duration-300 grayscale hover:filter-none  hover:border-red-600 transition"
           />
         </div>
 
@@ -19,7 +22,7 @@ const AboutSection: React.FC = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-red-500">
             About Lij Temesgen
           </h2>
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
+          <p className="text-lg text-gray-300 leading-relaxed mb-6 ">
             Lij Temesgen Melese, born in Shiro Meda, Addis Ababa, is a
             world-renowned choreographer and cultural ambassador. From walking
             hours to theaters in his youth to performing at prestigious
