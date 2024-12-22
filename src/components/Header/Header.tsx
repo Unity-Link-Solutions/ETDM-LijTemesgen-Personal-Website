@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const location = useLocation();
+
+  // Determine active link dynamically
+  const activeLink = location.pathname.replace("/", "") || "Home";
 
   // Detect scroll for header styling
   useEffect(() => {
@@ -26,11 +30,6 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
-
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-    setIsSidebarOpen(false); // Close sidebar when a link is clicked
-  };
 
   return (
     <header
@@ -83,16 +82,15 @@ const Header: React.FC = () => {
       <div className="container mx-auto lg:px-10 h-[70px] flex justify-between items-center border-b border-gray-500">
         {/* Left Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
-          {["Home", "Gallery", "Events"].map((link, idx) => (
+          {["Home", "Journey", "Events"].map((link, idx) => (
             <a
               key={idx}
-              href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
               className={`flex items-center justify-center px-6 h-full transition-all duration-300 ${
-                activeLink === link
+                activeLink.toLowerCase() === link.toLowerCase()
                   ? "text-primary"
                   : "text-lightGray hover:bg-secondary hover:text-primary"
               }`}
-              onClick={() => handleLinkClick(link)}
             >
               {link}
             </a>
@@ -109,13 +107,12 @@ const Header: React.FC = () => {
           {["Blog", "Contacts", "ETDM"].map((link, idx) => (
             <a
               key={idx}
-              href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
               className={`flex items-center justify-center px-6 h-full transition-all duration-300 ${
-                activeLink === link
+                activeLink.toLowerCase() === link.toLowerCase()
                   ? "text-primary"
                   : "text-lightGray hover:bg-secondary hover:text-primary"
               }`}
-              onClick={() => handleLinkClick(link)}
             >
               {link}
             </a>
@@ -124,19 +121,19 @@ const Header: React.FC = () => {
 
         {/* Mobile Hamburger */}
         <div
-          className="lg:hidden absolute right-8 top-6 flex items-center cursor-pointer z-50"
+          className="lg:hidden absolute right-8 top-4 flex items-center cursor-pointer z-50"
           onClick={toggleSidebar}
         >
-          <div className="relative w-8 h-8 flex justify-center items-center">
+          <div className="relative w-10 h-10 flex justify-center items-center">
             {isSidebarOpen ? (
               // "X" Icon
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 24 24"
+                viewBox="0 0 28 28"
                 strokeWidth="2"
                 stroke="currentColor"
-                className="w-6 h-6 text-white transition duration-300 ease-in-out transform rotate-0"
+                className="w-10 h-10 text-white transition duration-300 ease-in-out transform rotate-0"
               >
                 <path
                   strokeLinecap="round"
@@ -152,7 +149,7 @@ const Header: React.FC = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="2"
                 stroke="currentColor"
-                className="w-6 h-6 text-white transition duration-300 ease-in-out transform rotate-0"
+                className="w-8 h-8 text-white transition duration-300 ease-in-out transform rotate-0"
               >
                 <path
                   strokeLinecap="round"
@@ -172,7 +169,7 @@ const Header: React.FC = () => {
         } transition-transform duration-300`}
       >
         {/* Logo */}
-        <div className="text-3xl font-serif text-white text-center mb-8">
+        <div className="text-3xl font-serif text-white text-center mt-10 mb-8">
           <span>Lij</span> <span className="text-primary">Temesgen</span>
         </div>
 
@@ -189,31 +186,18 @@ const Header: React.FC = () => {
           ].map((link, idx) => (
             <li key={idx}>
               <a
-                href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
+                href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
                 className={`block text-lightGray hover:bg-secondary hover:text-primary px-4 py-2 rounded transition-colors ${
-                  activeLink === link ? "text-primary" : ""
+                  activeLink.toLowerCase() === link.toLowerCase()
+                    ? "text-primary"
+                    : ""
                 }`}
-                onClick={() => handleLinkClick(link)}
               >
                 {link}
               </a>
             </li>
           ))}
         </ul>
-
-        {/* Search Bar */}
-        <div className="mt-8 border-t border-gray-700 pt-6">
-          <input
-            type="text"
-            placeholder="Search"
-            className="w-full py-2 px-4 bg-gray-800 text-lightGray rounded-lg focus:outline-none mb-6"
-          />
-          <div className="flex justify-center space-x-4 text-primary">
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-twitter"></i>
-          </div>
-        </div>
       </div>
     </header>
   );

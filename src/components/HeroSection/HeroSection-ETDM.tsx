@@ -1,3 +1,5 @@
+import Breadcrumb from "../BreadCrumb Navigation/BradCrumb";
+
 const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-african-pattern-2 bg-cover bg-center pt-48 pb-20 lg:pt-48 lg:pb-32">
@@ -8,9 +10,7 @@ const HeroSection: React.FC = () => {
         <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
           Celebrating Ethiopian culture through dance, art, and tradition.
         </p>
-        <button className="mt-8 bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg text-lg lg:text-xl transition">
-          Learn More
-        </button>
+        <Breadcrumb items={[{ name: "Home", link: "/" }, { name: "ETDM" }]} />
       </div>
     </section>
   );

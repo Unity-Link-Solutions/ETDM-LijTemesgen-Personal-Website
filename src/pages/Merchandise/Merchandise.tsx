@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import HeroSection from "../../components/HeroSection/HeroSection2";
+import HeroSection from "../../components/HeroSection/HeroSection-ETDM";
 import ProductCard from "../../components/ProductCard/ProductCardTwo";
 import PatternDivider from "../../components/PatternDriver/PatternDriver1";
-import CallToAction from "../../components/CallToAction/CallToAction";
+import CallToAction from "../../components/CallToAction/CallToAction-ETDM";
 
 import merchImage1 from "../../assets/images/Merchandise/merch1.jpg";
 import merchImage2 from "../../assets/images/Merchandise/merch1.jpg";

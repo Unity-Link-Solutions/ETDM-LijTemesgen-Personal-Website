@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import heroImage1 from "../../assets/images/photoBlack1.jpg";
-import heroImage2 from "../../assets/images/photoBlack2.jpg";
-import heroImage3 from "../../assets/images/photoBlack3.jpg";
+import heroImage1 from "../../assets/images/PersonalPhoto/photoBlack1.jpg";
+import heroImage2 from "../../assets/images/PersonalPhoto/photoBlack2.jpg";
+import heroImage3 from "../../assets/images/PersonalPhoto/photoBlack3.jpg";
 
 const slides = [
   {

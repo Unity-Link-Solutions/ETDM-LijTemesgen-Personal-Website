@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout/MainLayout";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Music from "../pages/Music/Music";
-import Gallery from "../pages/Gallery/Gallery";
+import Journey from "../pages/Journey/Journey";
 import Merchandise from "../pages/Merchandise/Merchandise";
 import ETDM from "../pages/ETDM/ETDM";
 
@@ -45,10 +45,10 @@ const AppRoutes: React.FC = () => {
           }
         />
         <Route
-          path="/gallery"
+          path="/journey"
           element={
             <MainLayout>
-              <Gallery />
+              <Journey />
             </MainLayout>
           }
         />

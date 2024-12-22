@@ -1,5 +1,5 @@
 import React from "react";
-import portraitImage from "../../assets/images/portraite.jpg";
+import portraitImage from "../../assets/images/PersonalPhoto/portraite.jpg";
 
 const AboutSection: React.FC = () => {
   return (
