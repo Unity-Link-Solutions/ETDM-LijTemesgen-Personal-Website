@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ObambaImage from "../../assets/images/Testimonials/obama.jpg";
+import ObambaImage from "../../assets/images/Testimonials/Obama.jpg";
 import RophnanImage from "../../assets/images/Testimonials/Rophnan.png";
 
 const testimonials = [
