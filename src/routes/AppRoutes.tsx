@@ -6,6 +6,7 @@ import About from "../pages/About/About";
 import Music from "../pages/Music/Music";
 import Gallery from "../pages/Gallery/Gallery";
 import Merchandise from "../pages/Merchandise/Merchandise";
+import ETDM from "../pages/ETDM/ETDM";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -13,6 +14,14 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route
           path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/home"
           element={
             <MainLayout>
               <Home />
@@ -48,6 +57,14 @@ const AppRoutes: React.FC = () => {
           element={
             <MainLayout>
               <Merchandise />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/ETDM"
+          element={
+            <MainLayout>
+              <ETDM />
             </MainLayout>
           }
         />

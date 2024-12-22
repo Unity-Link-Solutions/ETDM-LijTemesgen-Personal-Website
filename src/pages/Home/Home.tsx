@@ -10,10 +10,7 @@ const Home: React.FC = () => {
   return (
     <>
       <HeroSection />
-      <AboutSection
-      // title="About the Artist"
-      // description="Blending Ethiopian culture with modern beats, this artist brings the soul of ETDM to the world."
-      />
+      <AboutSection />
       <RecentWorks />
       <TestimonialsSection />
       <MusicPlayer />

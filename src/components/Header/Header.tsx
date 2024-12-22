@@ -42,10 +42,39 @@ const Header: React.FC = () => {
     >
       {/* Top Bar */}
       {!isScrolled && (
-        <div className="bg-darkGray text-lightGray text-sm py-1 px-10 flex justify-between items-center border-b border-gray-700">
-          <span>Concert starts on 3 PM LT</span>
-          <div className="flex space-x-4 items-center">
-            <span>Addis Ababa. Bole, Millinium Hall</span>
+        <div className="bg-[#1C1C1C] text-white text-sm py-1 px-10 flex justify-between items-center border-b border-gray-700 lg:flex hidden">
+          {/* Left Side */}
+          <span className="tracking-wide font-medium">
+            🎤 Concert starts at <span className="text-red-500">3 PM LT</span>
+          </span>
+
+          {/* Right Side */}
+          <div className="flex items-center">
+            {/* Custom Location Icon */}
+            <div className="w-4 h-3 flex items-center justify-center bg-transparent rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-3 h-5 text-[#D3D3D3]"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 2C8.686 2 6 4.686 6 8c0 3.314 5 10 6 11s6-7.686 6-11c0-3.314-2.686-6-6-6z"
+                />
+                <circle cx="12" cy="8" r="2" fill="currentColor" />
+              </svg>
+            </div>
+
+            {/* Location Text */}
+            <div className="text-gray-300">
+              <span className="font-medium">Addis Ababa</span>
+              <span className="mx-1 text-gray-500">|</span>
+              <span>Bole, Millenium Hall</span>
+            </div>
           </div>
         </div>
       )}
@@ -57,7 +86,7 @@ const Header: React.FC = () => {
           {["Home", "Gallery", "Events"].map((link, idx) => (
             <a
               key={idx}
-              href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
               className={`flex items-center justify-center px-6 h-full transition-all duration-300 ${
                 activeLink === link
                   ? "text-primary"
@@ -77,10 +106,10 @@ const Header: React.FC = () => {
 
         {/* Right Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
-          {["Blog", "Shop", "Contacts"].map((link, idx) => (
+          {["Blog", "Contacts", "ETDM"].map((link, idx) => (
             <a
               key={idx}
-              href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
               className={`flex items-center justify-center px-6 h-full transition-all duration-300 ${
                 activeLink === link
                   ? "text-primary"
@@ -95,12 +124,44 @@ const Header: React.FC = () => {
 
         {/* Mobile Hamburger */}
         <div
-          className="lg:hidden flex flex-col gap-1 cursor-pointer z-50"
+          className="lg:hidden absolute right-8 top-6 flex items-center cursor-pointer z-50"
           onClick={toggleSidebar}
         >
-          <span className="block w-6 h-1 bg-white"></span>
-          <span className="block w-6 h-1 bg-white"></span>
-          <span className="block w-6 h-1 bg-white"></span>
+          <div className="relative w-8 h-8 flex justify-center items-center">
+            {isSidebarOpen ? (
+              // "X" Icon
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-6 h-6 text-white transition duration-300 ease-in-out transform rotate-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              // Hamburger Icon
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-6 h-6 text-white transition duration-300 ease-in-out transform rotate-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </div>
         </div>
       </div>
 
@@ -110,14 +171,6 @@ const Header: React.FC = () => {
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
-        {/* Close Button */}
-        <button
-          className="absolute top-6 right-6 text-white text-3xl"
-          onClick={toggleSidebar}
-        >
-          &times;
-        </button>
-
         {/* Logo */}
         <div className="text-3xl font-serif text-white text-center mb-8">
           <span>Lij</span> <span className="text-primary">Temesgen</span>
@@ -125,10 +178,18 @@ const Header: React.FC = () => {
 
         {/* Sidebar Links */}
         <ul className="space-y-6">
-          {["Home", "Pages", "Blog", "Shop", "Contacts"].map((link, idx) => (
+          {[
+            "Home",
+            "Pages",
+            "Gallery",
+            "Events",
+            "Blog",
+            "Merchandise",
+            "Contacts",
+          ].map((link, idx) => (
             <li key={idx}>
               <a
-                href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                href={`${link.toLowerCase().replace(/\s+/g, "-")}`}
                 className={`block text-lightGray hover:bg-secondary hover:text-primary px-4 py-2 rounded transition-colors ${
                   activeLink === link ? "text-primary" : ""
                 }`}
