@@ -1,105 +1,126 @@
-// import React from "react";
-// import { colors } from "../../theme/colors"; // Importing theme colors
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white mt-10">
-      <div className="container mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <footer className="bg-[#1F1E18] text-white ">
+      <div className="w-full h-12 bg-african-pattern-1 brightness-95 transition-opacity duration-500 hover:opacity-100 opacity-80 animate-pulse"></div>
+
+      <div className="container mx-auto py-12 px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Section */}
         <div>
-          <h2 className="text-2xl font-bold text-[colors.primary]">
-            About the Artist
-          </h2>
-          <p className="mt-2 text-gray-400">
-            Discover the pioneer of Ethiopian Traditional Dance Music (ETDM) and
-            their journey to connect culture with global music.
+          <h4 className="text-2xl font-bold text-red-500 mb-4">About</h4>
+          <p className="text-gray-400 leading-relaxed">
+            Lij Temesgen Melese, a celebrated choreographer, continues to
+            inspire the world with his innovative Ethiopian Traditional Dance
+            Music (ETDM).
           </p>
         </div>
 
-        {/* Navigation Links */}
+        {/* Quick Links Section */}
         <div>
-          <h3 className="text-2xl font-bold text-[colors.primary]">
-            Quick Links
-          </h3>
-          <ul className="mt-2 space-y-2">
+          <h4 className="text-2xl font-bold text-red-500 mb-4">Quick Links</h4>
+          <ul className="space-y-2">
             <li>
-              <a
-                href="#"
-                className="hover:text-[colors.primary] transition duration-300"
+              <Link
+                to="/about"
+                className="text-gray-400 hover:text-red-500 transition"
               >
-                Home
-              </a>
+                About
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[colors.primary] transition duration-300"
+              <Link
+                to="/music"
+                className="text-gray-400 hover:text-red-500 transition"
               >
                 Music
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[colors.primary] transition duration-300"
+              <Link
+                to="/gallery"
+                className="text-gray-400 hover:text-red-500 transition"
               >
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[colors.primary] transition duration-300"
+              <Link
+                to="/performances"
+                className="text-gray-400 hover:text-red-500 transition"
               >
-                Merchandise
-              </a>
+                Performances
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[colors.primary] transition duration-300"
+              <Link
+                to="/contact"
+                className="text-gray-400 hover:text-red-500 transition"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
-        {/* Social Media Links */}
+        {/* Newsletter & Socials */}
         <div>
-          <h3 className="text-2xl font-bold text-[colors.primary]">
-            Connect With Us
-          </h3>
-          <div className="flex justify-center md:justify-start space-x-4 mt-4">
+          <h4 className="text-2xl font-bold text-red-500 mb-4">
+            Stay Connected
+          </h4>
+          <p className="text-gray-400 mb-4">
+            Subscribe to get updates on new performances and events.
+          </p>
+          <form className="flex flex-col space-y-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="py-2 px-4 rounded bg-[#121212] text-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"
+            />
+            <button
+              type="submit"
+              className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition"
+            >
+              Subscribe
+            </button>
+          </form>
+
+          {/* Social Media Icons */}
+          <div className="flex space-x-4 mt-6">
             <a
               href="#"
-              aria-label="Facebook"
-              className="hover:text-[colors.primary] transition duration-300"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-red-500 transition text-2xl"
             >
-              <i className="fab fa-facebook fa-lg"></i>
+              <FaFacebook />
             </a>
             <a
               href="#"
-              aria-label="Instagram"
-              className="hover:text-[colors.primary] transition duration-300"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-red-500 transition text-2xl"
             >
-              <i className="fab fa-instagram fa-lg"></i>
+              <FaInstagram />
             </a>
             <a
               href="#"
-              aria-label="YouTube"
-              className="hover:text-[colors.primary] transition duration-300"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-red-500 transition text-2xl"
             >
-              <i className="fab fa-youtube fa-lg"></i>
+              <FaYoutube />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Copyright Section */}
-      <div className="border-t border-gray-700 mt-4 py-4 text-center">
-        <p className="text-gray-400">
-          &copy; {new Date().getFullYear()} Artist Name. All rights reserved.
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500">
+        <p>
+          &copy; {new Date().getFullYear()} Lij Temesgen. All Rights Reserved.
         </p>
       </div>
     </footer>
