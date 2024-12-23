@@ -9,7 +9,6 @@ const HeroSection: React.FC = () => {
         <h1 className="text-5xl font-bold text-red-500">
           The Journey of Lij Temesgen
         </h1>
-
         {/* Subtitle */}
         <p className="mt-4 text-lg text-gray-300">
           Celebrating the life, art, and legacy of an Ethiopian cultural icon.

@@ -69,16 +69,29 @@ const PhotoGallery: React.FC = () => {
 
   return (
     <div className="py-16 bg-[#1F1E18] text-white">
-      {/* Page Header */}
-      <div className="container mx-auto px-6 lg:px-20">
-        <h2 className="text-4xl font-bold text-red-500 mb-8 text-center tracking-wide">
+      <div className="text-center relative mb-12">
+        {/* Title Decoration */}
+        <div className="flex justify-center mb-6">
+          <div className="w-16 h-1 bg-primary rounded-full"></div>
+          <div className="w-4 h-4 bg-primary rounded-full mx-2"></div>
+          <div className="w-16 h-1 bg-primary rounded-full"></div>
+        </div>
+
+        {/* Title */}
+        <h2 className="text-5xl lg:text-6xl font-bold text-primary tracking-wide font-logo">
           Photo Gallery
         </h2>
-        <p className="text-gray-400 text-center mb-12">
-          Explore Ethiopia's vibrant culture and heritage through the lens of
-          Lij Temesgen's works.
-        </p>
 
+        {/* Subtitle / Paragraph */}
+        <p className="mt-4 text-lg lg:text-xl text-lightGray leading-relaxed max-w-3xl mx-auto">
+          Immerse yourself in the cultural richness of Ethiopia as captured in
+          the vibrant works of Lij Temesgen. A journey through art, tradition,
+          and history awaits you.
+        </p>
+      </div>
+
+      {/* Page Header */}
+      <div className="container mx-auto px-6 lg:px-20">
         {/* Filter Buttons */}
         <div className="flex justify-center space-x-4 mb-8">
           {["All", "Adwa", "Concerts"].map((category) => (
