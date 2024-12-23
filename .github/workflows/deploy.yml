@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - new # The branch to watch for changes (change to your default branch if necessary)
+      - main # The branch to watch for changes (change to your default branch if necessary)
 
 jobs:
   deploy:
