@@ -10,7 +10,9 @@ import ETDM from "../pages/ETDM/ETDM";
 
 const AppRoutes: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/ETDM-LijTemesgen-Personal-Website">
+      {" "}
+      {/* Add basename here */}
       <Routes>
         <Route
           path="/"
