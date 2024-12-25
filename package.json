@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Unity-Link-Solutions.github.io/ETDM-LijTemesgen-Personal-Website/",
   "name": "artist-personal-website",
   "private": true,
   "version": "0.0.0",
@@ -9,8 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@fontsource/playfair-display": "^5.1.0",
