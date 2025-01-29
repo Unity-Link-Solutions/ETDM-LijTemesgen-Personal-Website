@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
         {/* Right Side - Text */}
         <div className="w-full lg:w-1/2">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-red-500">
-            About Lij Temesgen
+            About Lij Temesgen Melese
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6 ">
             Lij Temesgen Melese, born in Shiro Meda, Addis Ababa, is a

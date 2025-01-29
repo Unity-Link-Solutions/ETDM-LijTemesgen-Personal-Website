@@ -7,6 +7,7 @@ import Music from "../pages/Music/Music";
 import Journey from "../pages/Journey/Journey";
 import Merchandise from "../pages/Merchandise/Merchandise";
 import ETDM from "../pages/ETDM/ETDM";
+import Event from "../pages/Events/Events";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -67,6 +68,14 @@ const AppRoutes: React.FC = () => {
           element={
             <MainLayout>
               <ETDM />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/events"
+          element={
+            <MainLayout>
+              <Event />
             </MainLayout>
           }
         />

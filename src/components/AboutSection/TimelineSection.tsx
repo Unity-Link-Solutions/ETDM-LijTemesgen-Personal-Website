@@ -10,7 +10,7 @@ const TimelineSection: React.FC = () => {
         {/* Timeline Section */}
         <div className="lg:w-2/3 lg:pr-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-red-500 mb-6">
-            The Journey of Lij Temesgen
+            The Journey of Lij Temesgen Melese
           </h2>
           <ul className="space-y-8">
             <li className="flex items-start">
@@ -20,9 +20,9 @@ const TimelineSection: React.FC = () => {
               <div className="ml-4">
                 <h3 className="text-xl font-semibold">Early Life</h3>
                 <p className="text-gray-300 mt-2">
-                  Lij Temesgen was born in Addis Ababa and showed artistic
-                  talent at a young age, immersing himself in Ethiopia's
-                  traditional music and culture.
+                  Lij Temesgen Melese was born in Addis Ababa and showed
+                  artistic talent at a young age, immersing himself in
+                  Ethiopia's traditional music and culture.
                 </p>
               </div>
             </li>
@@ -34,9 +34,9 @@ const TimelineSection: React.FC = () => {
               <div className="ml-4">
                 <h3 className="text-xl font-semibold">Rise to Fame</h3>
                 <p className="text-gray-300 mt-2">
-                  After years of dedication, Lij Temesgen captivated audiences
-                  with his unique blend of Ethiopian traditional music and
-                  modern styles.
+                  After years of dedication, Lij Temesgen Melese captivated
+                  audiences with his unique blend of Ethiopian traditional music
+                  and modern styles.
                 </p>
               </div>
             </li>
@@ -48,9 +48,9 @@ const TimelineSection: React.FC = () => {
               <div className="ml-4">
                 <h3 className="text-xl font-semibold">Cultural Ambassador</h3>
                 <p className="text-gray-300 mt-2">
-                  Lij Temesgen has become a cultural ambassador, spreading
-                  Ethiopian heritage and art across the globe through his music
-                  and performances.
+                  Lij Temesgen Melese has become a cultural ambassador,
+                  spreading Ethiopian heritage and art across the globe through
+                  his music and performances.
                 </p>
               </div>
             </li>

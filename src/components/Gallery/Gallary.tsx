@@ -3,16 +3,16 @@ import React, { useState } from "react";
 
 // Import images using Vite's glob import
 const allImages = import.meta.glob(
-  "../../assets/images/gallery/all/*.{png,jpg,jpeg,svg}",
-  { eager: true }
+  "../../assets/images/Gallery/all/*.{png,jpg,jpeg,svg}",
+  { eager: true },
 );
 const adwaImages = import.meta.glob(
-  "../../assets/images/gallery/adwa/*.{png,jpg,jpeg,svg}",
-  { eager: true }
+  "../../assets/images/Gallery/Adwa/*.{png,jpg,jpeg,svg}",
+  { eager: true },
 );
 const concertsImages = import.meta.glob(
-  "../../assets/images/gallery/concerts/*.{png,jpg,jpeg,svg}",
-  { eager: true }
+  "../../assets/images/Gallery/concerts/*.{png,jpg,jpeg,svg}",
+  { eager: true },
 );
 
 // Format images into usable objects
@@ -42,10 +42,10 @@ const PhotoGallery: React.FC = () => {
           ...concertsFormattedImages,
         ]
       : filter === "Adwa"
-      ? adwaFormattedImages
-      : filter === "Concerts"
-      ? concertsFormattedImages
-      : [];
+        ? adwaFormattedImages
+        : filter === "Concerts"
+          ? concertsFormattedImages
+          : [];
 
   const visibleImages = allFilteredImages.slice(0, visibleCount);
 
@@ -56,7 +56,7 @@ const PhotoGallery: React.FC = () => {
       setVisibleCount((prev) =>
         prev + 6 > allFilteredImages.length
           ? allFilteredImages.length
-          : prev + 6
+          : prev + 6,
       );
       setIsLoading(false); // Stop loading
     }, 1000); // Simulate a delay

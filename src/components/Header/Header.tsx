@@ -99,7 +99,7 @@ const Header: React.FC = () => {
 
         {/* Logo */}
         <div className="text-3xl font-serif text-white flex justify-center lg:static absolute w-full lg:w-auto">
-          <span>Lij</span> <span className="text-primary">Temesgen</span>
+          <span>Lij</span> <span className="text-primary">Temesgen Melese</span>
         </div>
 
         {/* Right Links */}
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
       >
         {/* Logo */}
         <div className="text-3xl font-serif text-white text-center mt-10 mb-8">
-          <span>Lij</span> <span className="text-primary">Temesgen</span>
+          <span>Lij</span> <span className="text-primary">Temesgen Melese</span>
         </div>
 
         {/* Sidebar Links */}
