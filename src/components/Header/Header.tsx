@@ -98,7 +98,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Logo */}
-        <div className="text-3xl font-serif text-white flex justify-center lg:static absolute w-full lg:w-auto">
+        <div className="text-3xl font-serif text-white flex sm:justify-end justify-center absolute sm:static w-full sm:w-auto right-8 sm:right-0">
           <span>Lij</span> <span className="text-primary">Temesgen Melese</span>
         </div>
 
@@ -177,8 +177,6 @@ const Header: React.FC = () => {
         <ul className="space-y-6">
           {[
             "Home",
-            "Pages",
-            "Gallery",
             "Events",
             // "Blog",
             "Merchandise",
