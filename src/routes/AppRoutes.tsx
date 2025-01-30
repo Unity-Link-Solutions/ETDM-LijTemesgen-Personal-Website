@@ -8,6 +8,7 @@ import Journey from "../pages/Journey/Journey";
 import Merchandise from "../pages/Merchandise/Merchandise";
 import ETDM from "../pages/ETDM/ETDM";
 import Event from "../pages/Events/Events";
+import Contact from "../pages/Contact/Contact";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -76,6 +77,14 @@ const AppRoutes: React.FC = () => {
           element={
             <MainLayout>
               <Event />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/contacts"
+          element={
+            <MainLayout>
+              <Contact />
             </MainLayout>
           }
         />

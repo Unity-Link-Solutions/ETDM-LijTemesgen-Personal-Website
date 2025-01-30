@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSection from "../../components/HeroSection/HeroSection-ETDM";
+import EventsHeroSection from "../../components/HeroSection/HeroSection-Events";
 
 const ETDMPage: React.FC = () => {
   return (
     <div>
-      <HeroSection />
+      <EventsHeroSection />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const EventsHeroSection: React.FC = () => {
+const ContactHeroSection: React.FC = () => {
   return (
     <section className="relative bg-african-pattern-2 w-full h-[80vh] flex items-center justify-center bg-cover bg-center">
       {/* Overlay */}
@@ -9,22 +9,18 @@ const EventsHeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-6 lg:px-12">
         <h2 className="text-lg text-gray-300 uppercase tracking-widest font-light mb-2">
-          Explore Exciting Events
+          Get in Touch
         </h2>
         <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-          Discover & Attend{" "}
-          <span className="text-red-500">Upcoming Events</span>
+          We’d Love to <span className="text-red-500">Hear from You</span>
         </h1>
         <p className="text-lg lg:text-xl text-gray-300 mb-8">
-          Stay connected with the latest happenings, workshops, and cultural
-          events around you.
+          Have questions or inquiries? Reach out to us, and we’ll be happy to
+          assist you.
         </p>
-        <button className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg transition">
-          Browse Events
-        </button>
       </div>
     </section>
   );
 };
 
-export default EventsHeroSection;
+export default ContactHeroSection;

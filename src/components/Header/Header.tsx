@@ -104,7 +104,7 @@ const Header: React.FC = () => {
 
         {/* Right Links */}
         <nav className="hidden lg:flex space-x-0 h-full">
-          {["Blog", "Contacts", "ETDM"].map((link, idx) => (
+          {["Contacts", "ETDM"].map((link, idx) => (
             <a
               key={idx}
               href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
@@ -180,7 +180,7 @@ const Header: React.FC = () => {
             "Pages",
             "Gallery",
             "Events",
-            "Blog",
+            // "Blog",
             "Merchandise",
             "Contacts",
           ].map((link, idx) => (
