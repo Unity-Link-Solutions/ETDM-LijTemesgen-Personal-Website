@@ -1,5 +1,7 @@
 import React from "react";
 
+const EVENTS_URL = "https://example-event-website.com"; // Replace with the actual event listing URL
+
 const EventsHeroSection: React.FC = () => {
   return (
     <section className="relative bg-african-pattern-2 w-full h-[80vh] flex items-center justify-center bg-cover bg-center">
@@ -19,9 +21,14 @@ const EventsHeroSection: React.FC = () => {
           Stay connected with the latest happenings, workshops, and cultural
           events around you.
         </p>
-        <button className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg transition">
+        <a
+          href={EVENTS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg transition inline-block"
+        >
           Browse Events
-        </button>
+        </a>
       </div>
     </section>
   );
